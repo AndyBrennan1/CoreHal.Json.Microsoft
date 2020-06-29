@@ -1,0 +1,26 @@
+﻿[
+  {
+    "string-Property": "String Property 1",
+    "_embedded": {
+      "test": {
+        "integer-Property": 999
+      }
+    }
+  },
+  {
+    "string-Property": "String Property 2",
+    "_embedded": {
+      "test": {
+        "integer-Property": 999
+      }
+    }
+  },
+  {
+    "string-Property": "String Property 3",
+    "_embedded": {
+      "test": {
+        "integer-Property": 999
+      }
+    }
+  }
+]

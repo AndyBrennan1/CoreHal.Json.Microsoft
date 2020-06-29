@@ -1,0 +1,11 @@
+[
+  {
+    "string-Property": "String Property 1"
+  },
+  {
+    "string-Property": "String Property 2"
+  },
+  {
+    "string-Property": "String Property 3"
+  }
+]

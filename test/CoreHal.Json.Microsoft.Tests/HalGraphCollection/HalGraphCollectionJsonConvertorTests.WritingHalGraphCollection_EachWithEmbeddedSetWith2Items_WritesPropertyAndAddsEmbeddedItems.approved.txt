@@ -1,0 +1,41 @@
+[
+  {
+    "string-Property": "String Property 1",
+    "_embedded": {
+      "test": [
+        {
+          "integer-Property": 111
+        },
+        {
+          "integer-Property": 222
+        }
+      ]
+    }
+  },
+  {
+    "string-Property": "String Property 2",
+    "_embedded": {
+      "test": [
+        {
+          "integer-Property": 111
+        },
+        {
+          "integer-Property": 222
+        }
+      ]
+    }
+  },
+  {
+    "string-Property": "String Property 3",
+    "_embedded": {
+      "test": [
+        {
+          "integer-Property": 111
+        },
+        {
+          "integer-Property": 222
+        }
+      ]
+    }
+  }
+]

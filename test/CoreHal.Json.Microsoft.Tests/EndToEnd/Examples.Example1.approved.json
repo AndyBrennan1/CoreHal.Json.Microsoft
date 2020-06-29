@@ -1,0 +1,110 @@
+﻿{
+  "_links": {
+    "curies": [
+      {
+        "name": "ord",
+        "href": "/api/orders/{order-number}",
+        "templated": true
+      }
+    ],
+    "self": {
+      "href": "/api/orders/ORDER123"
+    }
+  },
+  "order-Id": {},
+  "customer-Name": "A B Systems",
+  "order-Date": "2020-06-23T00:00:00",
+  "order-Value": {},
+  "order-Number": "ORDER123",
+  "_embedded": {
+    "customer": {
+      "_links": {
+        "self": {
+          "href": "/api/customers/A-B-Systems"
+        }
+      },
+      "customer-Id": {},
+      "company-Name": "A-B-Systems",
+      "primary-Phone-Number": "\u002B44787642628292",
+      "primary-Contact": "Andy Brennan",
+      "sector": {
+        "SectorId": "030a522a-ef75-44f3-af61-62fa8fa655a9",
+        "Name": "NuGet Making"
+      }
+    },
+    "singular-order-line": {
+      "_links": {
+        "order": {
+          "href": "/api/orders/ORDER123"
+        },
+        "parent": {
+          "href": "/api/orders/ORDER123/order-lines"
+        },
+        "self": {
+          "href": "/api/orders/ORDER123/order-lines/999cc766-5370-4d66-9aa8-6ae02787762c"
+        }
+      },
+      "order-Line-Id": {},
+      "product-Name": "Apple",
+      "sku": "APP123",
+      "quantity": {},
+      "line-Value": {}
+    },
+    "order-lines": [
+      {
+        "_links": {
+          "order": {
+            "href": "/api/orders/ORDER123"
+          },
+          "parent": {
+            "href": "/api/orders/ORDER123/order-lines"
+          },
+          "self": {
+            "href": "/api/orders/ORDER123/order-lines/999cc766-5370-4d66-9aa8-6ae02787762c"
+          }
+        },
+        "order-Line-Id": {},
+        "product-Name": "Apple",
+        "sku": "APP123",
+        "quantity": {},
+        "line-Value": {}
+      },
+      {
+        "_links": {
+          "order": {
+            "href": "/api/orders/ORDER123"
+          },
+          "parent": {
+            "href": "/api/orders/ORDER123/order-lines"
+          },
+          "self": {
+            "href": "/api/orders/ORDER123/order-lines/950c1b91-38a3-413c-9d00-b886ea435943"
+          }
+        },
+        "order-Line-Id": {},
+        "product-Name": "Orange",
+        "sku": "ORA555",
+        "quantity": {},
+        "line-Value": {}
+      },
+      {
+        "_links": {
+          "order": {
+            "href": "/api/orders/ORDER123"
+          },
+          "parent": {
+            "href": "/api/orders/ORDER123/order-lines"
+          },
+          "self": {
+            "href": "/api/orders/ORDER123/order-lines/e258854b-9a6b-4ff0-86c2-a8fe2589d276"
+          }
+        },
+        "order-Line-Id": {},
+        "product-Name": "Pear",
+        "sku": "PER88",
+        "quantity": {},
+        "line-Value": {}
+      }
+    ]
+  }
+}
