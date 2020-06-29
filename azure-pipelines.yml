@@ -1,0 +1,70 @@
+# ASP.NET Core
+# Build and test ASP.NET Core projects targeting .NET Core.
+# Add steps that run tests, create a NuGet package, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  buildConfiguration: 'Release'
+  version: 0.1
+  Major: '1'
+  Minor: '0'
+  Patch: '0'
+
+steps:
+
+# RESTORE PACKAGES ------------------------------------------------------------------------
+
+- task: DotNetCoreCLI@2
+  displayName: Restore
+  inputs:
+    command: restore
+    projects: '**/*.csproj'
+
+# BUILD ------------------------------------------------------------------------------------
+
+- task: DotNetCoreCLI@2
+  displayName: Build
+  inputs:
+    command: 'build'
+    arguments: '--configuration $(buildConfiguration)'
+
+# RUN TESTS -------------------------------------------------------------------------------
+
+- task: DotNetCoreCLI@2
+  displayName: Run Tests
+  inputs:
+    command: test
+    projects: '**/*Tests/*.csproj'
+    arguments: '--configuration $(buildConfiguration)'
+    
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'XUnit'
+    testResultsFiles: '**/TEST-*.xml'
+    mergeTestResults: true
+    failTaskOnFailedTests: true
+    testRunTitle: 'Unit Tests'
+
+# PACKAGE AND PUBLISH TO NUGET -------------------------------------------------------------------------------
+    
+- task: DotNetCoreCLI@2
+  displayName: Create Package 
+  inputs:
+    command: pack 
+    versioningScheme: byPrereleaseNumber
+    majorVersion: '$(Major)'
+    minorVersion: '$(Minor)'
+    patchVersion: '$(Patch)'
+
+- task: NuGetCommand@2
+  inputs:
+    command: 'push'
+    packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
+    nuGetFeedType: 'internal'
+    publishVstsFeed: 'e5f71a34-4c69-4ed2-80f5-a8037477d684/796901c8-ecc5-497c-a540-df6484e6de9b'
