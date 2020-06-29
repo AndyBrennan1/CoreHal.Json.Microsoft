@@ -21,12 +21,13 @@ steps:
 # RESTORE PACKAGES ------------------------------------------------------------------------
 
 - task: DotNetCoreCLI@2
-  displayName: Restore
+  displayName: Restore from Nuget.org
   inputs:
     command: restore
     projects: '**/*.csproj'
 
 - task: NuGetCommand@2
+  displayName: Restore from Andys Feed
   inputs:
     command: 'restore'
     restoreSolution: '**/*.sln'
