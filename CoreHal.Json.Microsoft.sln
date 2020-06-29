@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30128.74
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreHal.Json", "src\CoreHal.Json.Microsoft\CoreHal.Json.csproj", "{2E02F2FF-4A12-4C03-AF6E-0EE22E582DB1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreHal.Json.Microsoft", "src\CoreHal.Json.Microsoft\CoreHal.Json.Microsoft.csproj", "{2E02F2FF-4A12-4C03-AF6E-0EE22E582DB1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Code", "Code", "{CF10F542-2948-42E3-BDCC-A2A6A5D5A538}"
 EndProject
