@@ -26,6 +26,13 @@ steps:
     command: restore
     projects: '**/*.csproj'
 
+- task: NuGetCommand@2
+  inputs:
+    command: 'restore'
+    restoreSolution: '**/*.sln'
+    feedsToUse: 'select'
+    vstsFeed: 'e5f71a34-4c69-4ed2-80f5-a8037477d684/796901c8-ecc5-497c-a540-df6484e6de9b'
+
 # BUILD ------------------------------------------------------------------------------------
 
 - task: DotNetCoreCLI@2
