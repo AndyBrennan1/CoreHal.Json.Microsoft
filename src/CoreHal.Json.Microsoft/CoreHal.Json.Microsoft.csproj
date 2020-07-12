@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CoreHal" Version="1.0.0-CI-20200704-003932" />
+    <PackageReference Include="CoreHal" Version="1.0.0-CI-20200712-125020" />
   </ItemGroup>
 
 </Project>
